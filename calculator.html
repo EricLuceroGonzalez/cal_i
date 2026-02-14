@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Calculator</title>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <h1>Calculadora de Eric Lucero Gonzalez</h1>
+    Número:
+    <input type="text" id="n1" />
+    <p>
+      <button onclick="cube()">x^3</button>
+      <button onclick="power_4()">x^4</button>
+      <button onclick="inverse()">1/x</button>
+      <!-- Modulo 4: Git Merge -->
+      <button onclick="sine()">sin(x)</button>
+    </p>
+    <div
+      style="
+        padding: 20px 0;
+        margin: 20px 0px;
+        border: 1px solid gray;
+        width: 50%;
+      "
+    >
+      <h2>Resultado:</h2>
+      <input type="text" id="result" readonly />
+    </div>
+    <script type="text/javascript">
+      function inverse() {
+        var num = document.getElementById("n1");
+        num.value = Math.pow(num.value, 3);
+        document.getElementById("result").value = num.value;
+      }
+      function power_4() {
+        var num = document.getElementById("n1");
+        num.value = Math.pow(num.value, 4);
+        document.getElementById("result").value = num.value;
+      }
+      function inverse() {
+        var num = document.getElementById("n1");
+        num.value = 1 / num.value;
+        document.getElementById("result").value = num.value;
+      }
+      function sine() {
+        var num = document.getElementById("n1");
+        num.value = Math.sin(num.value);
+        document.getElementById("result").value = num.value;
+      }
+    </script>
+  </body>
+</html>
